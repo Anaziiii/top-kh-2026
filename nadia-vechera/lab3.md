@@ -1,5 +1,7 @@
 **Львівський національний університет ветеринарної медицини та біотехнологій імені С.З. Ґжицького**
 
+**Кафедра інформаційних технологій**
+
 # Звіт про виконання лабораторної роботи №3
 На тему 
 "Основи структурного програмування в Python 3"
@@ -40,7 +42,7 @@ if first_array and first_array[0] == 1:
     print("5")
 ```
 **Результат:**
-![alt text](image.png)
+![alt text](images/image31.png)
 
 
 2. **Цикл while:**
@@ -56,7 +58,7 @@ if first_array and first_array[0] == 1:
 
 Саме [Завдання](https://www.w3schools.com/python/python_challenges_while_loops.asp)
 **Результат**
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 
 3. **Цикл for:**
 
@@ -67,7 +69,7 @@ if first_array and first_array[0] == 1:
 
 Саме [Завдання](https://www.w3schools.com/python/python_challenges_for_loops.asp)
 **Результат**
-![alt text](image-2.png)
+![alt text](images/image-2.png)
 
 
 ### Висновок

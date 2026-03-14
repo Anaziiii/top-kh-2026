@@ -1,5 +1,9 @@
 **Львівський національний університет ветеринарної медицини та біотехнологій імені С.З. Ґжицького**
 
+
+**Кафедра інформаційних технологій**
+
+
 # Звіт про виконання лабораторної роботи №2
 На тему 
 "Вивчення вбудованих типів даних і методів роботи з ними у Python 3"
@@ -31,7 +35,7 @@ if isinstance(myint, int) and myint == 20:
 ```
 
 **Результат:**
-![alt text](image-1.png)
+![alt text](images/image22.png)
 
 
 
@@ -55,7 +59,7 @@ print(strings)
 ```
 
 **Результат:**
-![alt text](image-2.png)
+![alt text](images/image23.png)
 
 
 
@@ -79,8 +83,8 @@ if big_list.count(x) == 10 and big_list.count(y) == 10:
 ```
 
 **Результат:**
-![alt text](image-3.png)
-![alt text](image-4.png)
+![alt text](images/image-3.png)
+![alt text](images/image-4.png)
 
 
 
@@ -102,7 +106,7 @@ if "Jill" not in phonebook:
 ```
 
 **Результат:**
-![alt text](image-5.png)
+![alt text](images/image-5.png)
 
 
 5. **Основні операції з рядками:**
@@ -138,7 +142,7 @@ if s.endswith("ome!"):
 print("Split the words of the string: %
 ```
 **Результат:**
-![alt text](image-6.png)
+![alt text](images/image-6.png)
 
 ### Висновок
 В цій практичній роботі я попрактикувалась з синтаксисом Python 3 та повторила інші оператори. Сподобався сайт буду далі з ним працювати.
