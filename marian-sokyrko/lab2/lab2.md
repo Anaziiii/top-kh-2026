@@ -16,9 +16,8 @@
 
 ## Хід роботи
 
-1. Змінні і типи:
+### 1. Засвоїв поняття змінних в python 3 та їх прості типи:
 Код:
-
 ```python
 mystring = "hello"
 myfloat = 10.0
@@ -36,7 +35,7 @@ if isinstance(myint, int) and myint == 20:
 
 ![Variables](./images/variables.png)
 
-### 2. Базові операції:
+### 2. Навчився здійснювати базові операції та приводити типи:
 **Код:**
 ```python
 x = object()
@@ -60,7 +59,7 @@ if big_list.count(x) == 10 and big_list.count(y) == 10:
 
 ![Basic Operations](./images/basik_operations.png)
 
-### 3. Списки у Python 3:
+### 3. Освоїв роботу зі стрічками як зі списками (“Lists”):
 **Код:**
 
 ```python
@@ -86,7 +85,7 @@ print("The second name on the names list is %s" % second_name)
 
 ![Lists](./images/list.png)
 
-### 4. Словники у Python:
+### 4. Ознайомився з типом даних “словник” (“Dictionary”):
 **Код:**
 
 ```python
@@ -95,10 +94,8 @@ phonebook = {
     "Jack" : 938377264,
     "Jill" : 947662781
 }  
-# your code goes here
 phonebook["Jake"] = 938273443
 del phonebook["Jill"]
-# testing code
 if "Jake" in phonebook:  
     print("Jake is listed in the phonebook.")
     
@@ -110,7 +107,7 @@ if "Jill" not in phonebook:
 
 ![Dictionaries](./images/distionaris.png)
 
-### 5. Рядки та операції з ними:
+### 5. Ознайомився з основними операціями над рядками:
 **Код:**
 
 ```python
@@ -140,5 +137,6 @@ print("Split the words of the string: %s" % s.split(" "))
 ![String Operations](./images/string_operations.png)
 
 
-### Висновок:
-Під час виконання цієї лабораторної роботи я вивчив основи розробки простих застосунків на мові Python 3.
+### Висновки:
+
+Під час виконання лабораторної роботи я ознайомився з базовим синтаксисом Python 3. Я навчився працювати зі змінними, різними типами даних (числа, рядки, списки), а також опанував основні операції над ними. 
