@@ -5,6 +5,8 @@ class Car:
         self.year = year
         self.probih = probih
         self.speed = 0
+
+        self.your_car = brand + " " + model
     
     def acceleration(self):
         if self.speed < 200:
@@ -17,6 +19,12 @@ class Car:
             self.speed -= 10
         else:
             print("you are standing")
+
+    def get_description(self):
+        return(f"Car: {self.your_car}\n"
+                f"Car year: {self.year}\n"
+                f"Probih: {self.probih} км\n"
+                f"Current speed: {self.speed} km/h")
 
 car1 = Car("audi", "a4", 2016, 160000)
 

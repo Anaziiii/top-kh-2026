@@ -69,7 +69,7 @@ while i < 6:
 Результат:
 ![alt text](images/while.png)
 
-### Посилання на [завдання](https://www.w3schools.com/python/python_challenges_while_loops.asp), яке було взято зі сайту.
+*Посилання на [завдання](https://www.w3schools.com/python/python_challenges_while_loops.asp), яке було взято зі сайту.*
 
 
 3. *Цикл for та break*
@@ -88,6 +88,6 @@ for i in fruits:
 Результат:
 ![alt text](images/break.png)
 
-### Посилання на [завдання](https://www.w3schools.com/python/python_challenges_for_loops.asp) яке було взято зі сайту.
+*Посилання на [завдання](https://www.w3schools.com/python/python_challenges_for_loops.asp) яке було взято зі сайту.*
 ## Висновки
 Після цієї лаборатоної я пригадала і закріпила знання використання циклів for (для фіксованих послідовностей) та while (для умовних циклів). Дізналася різницю між керуючими операторами break та continue.
