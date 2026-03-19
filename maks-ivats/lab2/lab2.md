@@ -19,7 +19,7 @@
 2. Розглянув поняття змінних в Python 3 та засвоїв їх прості типи:
     ![Variables and Types.png](ph%2FVariables%20and%20Types.png)
 3. Навчився здійснювати базові операції та приводити типи:
-    ![Basic Operators.png](Навчився здійснюваph%2FBasic%20Operators.png)
+    ![img.png](img.png)
 4. Ознайомився з типом “List”. Навчився задавати та зчитувати значення їх елементів:
     ![Lists.png](ph%2FLists.png)
 5. Ознайомився з основними операторами мови Python 3:
