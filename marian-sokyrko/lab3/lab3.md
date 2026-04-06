@@ -55,10 +55,10 @@ if not second_number:
 
 fruits = ["apple", "banana", "cherry"]
 
-for fruit in fruits:
-    print(fruit)
-    if fruit == "banana":
-        break
+for i in fruits:
+    print(i)
+    if i == "banana":
+       break
 
 ```
 
@@ -72,10 +72,12 @@ for fruit in fruits:
 ```python
 
 i = 0
+
 while i < 6:
-    if i != 3:
-        print(i)
-    i += 1
+   i += 1
+   if i == 3:
+      continue
+   print(i)
 
 
 ```
