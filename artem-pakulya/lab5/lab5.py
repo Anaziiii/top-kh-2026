@@ -8,8 +8,8 @@ class Cat():
         return {"Ім'я" : self.name,
                 "Порода" :self.breed,
                 "вік" : self.age}
-obj1=Cat("буся","британський","3")
-obj2=Cat("Вася","британський","3")
-print(obj1.information())
-print(obj2.information())
+animal1=Cat("буся","британський","3")
+animal2=Cat("Вася","британський","3")
+print(animal1.information())
+print(animal2.information())
 
