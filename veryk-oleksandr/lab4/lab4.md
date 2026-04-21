@@ -45,7 +45,7 @@ name_the_benefits_of_functions()
 
 ```
 
-![](./image-1.png)
+![](./images/image-1.png)
 
 ## Висновок
 
