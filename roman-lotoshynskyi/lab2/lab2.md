@@ -60,7 +60,7 @@ if big_list.count(x) == 10 and big_list.count(y) == 10:
 
 Результат:
 
-![код](/roman-lotoshynskyi/lab2/images/basic_operations.png)
+![код](/roman-lotoshynskyi/lab2/images/basic_operators.png)
 
 3. Списки
 
@@ -85,7 +85,7 @@ print("The second name on the names list is %s" % second_name)
 
 Результат:
 
-![код](/roman-lotoshynskyi/lab2/images/list.png)
+![код](/roman-lotoshynskyi/lab2/images/lists.png)
 
 4. Основні операції зі строками
 
@@ -144,7 +144,7 @@ if "Jill" not in phonebook:
 
 Результат:
 
-![код](/roman-lotoshynskyi/lab2/images/dictionaris.png)
+![код](/roman-lotoshynskyi/lab2/images/dictionaries.png)
 
 ## Висновок
 У ході даної лабораторної роботи я ознайомився з базовим синтаксисом у Python 3, а також з різними типами данних, та основними операціями під час роботи з ними.
