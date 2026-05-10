@@ -98,6 +98,10 @@ isinstance_____isinstance(my_cat, Dog)____False_______Кіт не є собак�
 
 issubclass_____issubclass(Dog, Animal)___True_______Підтверджує, що Dog є офіційним нащадком Animal.
 
+Результат:
+
+![alt text](images/image81.png)
+
 
 **Висновки**:
 
