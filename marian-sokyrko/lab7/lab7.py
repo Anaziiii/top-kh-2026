@@ -38,4 +38,6 @@ print(Student.get_total_students())
 
 test_score = 59
 print(f"Чи є бал {test_score} прохідним? {Student.is_passing_grade(test_score)}")
+print(f"Чи є бал {student1.average_score} прохідним? {Student.is_passing_grade(student1.average_score)}")
 print(f"Чи є бал {student2.average_score} прохідним? {Student.is_passing_grade(student2.average_score)}")
+print(f"Чи є бал {student3.average_score} прохідним? {Student.is_passing_grade(student3.average_score)}")
