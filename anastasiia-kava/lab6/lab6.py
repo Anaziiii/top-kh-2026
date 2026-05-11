@@ -1,31 +1,40 @@
 class Phone:
+
     how_many = 0
+
+    dollar = 41
+
     def __init__(self, brand, model, price):
         self.brand = brand
         self.model = model
         self.price = price
-        self.price_in_dollars = self.price / 42
+        self.dollars = self.price / Phone.dollar
         Phone.how_many += 1
 
-    def ring(self):
-        return f"{self.brand} : Beep! Beep!"
-    
     def info(self):
-        return f"brand: {self.brand} model: {self.model} price: {self.price} price in dollars: {self.price_in_dollars}"
-    
-    @classmethod
-    def count(Phone):
-        return Phone.how_many
+        return (f"Бренд: {self.brand} Модель: {self.model}"
+                f"Ціна: {self.price} грн $: {self.dollars}")
 
-phone1 = Phone("Apple", "iPhone", 6000)
-phone2 = Phone("Samsung", "Galaxy", 5000)
+    def new_dollar(self, dollar):
 
-print(Phone.count())
+        self.dollars = self.price / dollar
 
-print(Phone.ring(phone2))
-print(phone2.ring())
 
-print(Phone.info(phone1))
+phone1 = Phone("Apple", "iPhone 15", 45000)
+phone2 = Phone("Samsung", "S23", 38000)
+
+
+print(f"Кількість: {Phone.how_many}")
+
 print(phone1.info())
+print(phone2.info())
+
+print("Долар 42 для обох")
 
 
+phone1.new_dollar(42)
+phone2.new_dollar(42)
+
+
+print(phone1.info())
+print(phone2.info())
