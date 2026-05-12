@@ -12,7 +12,7 @@ class Student:
 
     @classmethod
     def get_count(cls):
-        return f"Кількість створених об'єктів: {cls.count}"
+        return f"Кількість студентів групи: {cls.count}"
 
 
 student1 = Student("Лотошинський Роман", 2, 68)
