@@ -14,7 +14,7 @@ class Phone:
 
     def info(self):
         return (f"Brand: {self.brand}, Model: {self.model}, "
-                f"Price: {self.price:.2f} грн. Долар: {self.price_in_dollars}")
+                f"Price: {self.price:} грн. Долар: {self.price_in_dollars}")
 
     def apply_tax(self):
         self.price = self.price * (1 + self.tax)
@@ -49,6 +49,6 @@ print(f"Чи працює магазин о 10:00? {Phone.is_work_hour(10)}")
 
 print(f"До податку: {phone1.price} грн")
 phone1.apply_tax() 
-print(f"Після податку: {phone1.price:.2f} грн")
+print(f"Після податку: {phone1.price:} грн")
 
 print(f"Всього телефонів: {Phone.get_count()}")
