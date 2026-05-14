@@ -28,8 +28,8 @@ class Student:
 student1 = Student("Мар'ян", "Сокирко", 2, 75)
 student2 = Student("Орест", "Баган", 2, 90)
 
-student3_data = "Максим, Іваць, 2, 85"
-student3 = Student.from_string(student3_data)
+student3_1 = "Максим, Іваць, 2, 85"
+student3 = Student.from_string(student3_1)
 
 print(student1.get_description())
 print(student2.get_description())
