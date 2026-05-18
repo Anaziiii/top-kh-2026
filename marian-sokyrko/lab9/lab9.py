@@ -57,9 +57,9 @@ class ContractStudent(Student):
         return f"[Контракт] {super().get_description()}, оплата {self.payment_amount}"
 
     def compare_with_budget(self, budget_student):
-        if isinstance(budget_student, BudgetStudent):
+        if isinstance(student4_b , BudgetStudent):
             print(
-                f"Контрактник {self.last_name} та бюджетник {budget_student.last_name} навчаються на {self.course} курсі.")
+                f"Контрактник {self.last_name} та бюджетник {student4_b.last_name} навчаються на {self.course} курсі.")
 
 
 if __name__ == "__main__":
