@@ -76,5 +76,5 @@ if __name__ == "__main__":
     print(Student.get_total_students())
     print(f"Чи у Ореста ({student2.average_score}) бал вищий ніж у Максима ({student3.average_score})?")
     print(f"Результат (student2 > student3): {student2 > student3}")
-    print(f"\nЧи у Данила ({student4_b.average_score}) бал нижчий ніж у Олега ({student5_c.average_score})?")
-    print(f"Результат (student4_b < student5_c): {student4_b < student5_c}")
+    print(f"\nЧи у Олега ({student5_c.average_score}) бал вищий ніж у Данила ({student4_b.average_score})?")
+    print(f"Результат (student5_c > student4_b): {student5_c > student4_b}")
