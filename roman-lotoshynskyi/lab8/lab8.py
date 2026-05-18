@@ -36,9 +36,7 @@ class Teacher(Student):
         return f"Викладач предмету: {self.subject}"
 
 student1 = Student("Лотошинський Роман", 2, 66)
-
 monitor1 = Monitor("Кава Анастасія", 2, 89, "КН-21")
-
 teacher1 = Teacher("Іваць Максим", 2, 58, "Python")
 
 print(student1.get_info())
