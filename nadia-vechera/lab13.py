@@ -1,51 +1,76 @@
 from abc import ABC, abstractmethod
 
-# 1. Інтерфейс стратегії
-class DiscountStrategy(ABC):
+# 1. Базовий компонент (інтерфейс кави)
+class Coffee(ABC):
     @abstractmethod
-    def apply_discount(self, amount: float) -> float:
+    def get_cost(self) -> float:
         pass
 
-# 2. Конкретні реалізації стратегій
-class NoDiscount(DiscountStrategy):
-    def apply_discount(self, amount: float) -> float:
-        return amount
+    @abstractmethod
+    def get_description(self) -> str:
+        pass
 
-class PercentageDiscount(DiscountStrategy):
-    def __init__(self, percent: float):
-        self.percent = percent
 
-    def apply_discount(self, amount: float) -> float:
-        return amount * (1 - self.percent / 100)
+# 2. Конкретний компонент (основа)
+class SimpleCoffee(Coffee):
+    def get_cost(self) -> float:
+        return 30.0
 
-class FixedDiscount(DiscountStrategy):
-    def __init__(self, discount_amount: float):
-        self.discount_amount = discount_amount
+    def get_description(self) -> str:
+        return "Звичайна кава"
 
-    def apply_discount(self, amount: float) -> float:
-        return max(0.0, amount - self.discount_amount)
 
-# 3. Контекст, який використовує обрану стратегію
-class Order:
-    def __init__(self, total_price: float, discount_strategy: DiscountStrategy):
-        self.total_price = total_price
-        self.discount_strategy = discount_strategy
+# 3. Базовий декоратор
+class CoffeeDecorator(Coffee):
+    def __init__(self, coffee: Coffee):
+        self._coffee = coffee
 
-    def calculate_final_price(self) -> float:
-        return self.discount_strategy.apply_discount(self.total_price)
+    def get_cost(self) -> float:
+        return self._coffee.get_cost()
 
-# Використання
+    def get_description(self) -> str:
+        return self._coffee.get_description()
+
+
+# 4. Конкретні декоратори (додатки)
+class MilkDecorator(CoffeeDecorator):
+    def get_cost(self) -> float:
+        return self._coffee.get_cost() + 10.0
+
+    def get_description(self) -> str:
+        return self._coffee.get_description() + ", молоко"
+
+
+class SugarDecorator(CoffeeDecorator):
+    def get_cost(self) -> float:
+        return self._coffee.get_cost() + 5.0
+
+    def get_description(self) -> str:
+        return self._coffee.get_description() + ", цукор"
+
+
+class WhipDecorator(CoffeeDecorator):
+    def get_cost(self) -> float:
+        return self._coffee.get_cost() + 15.0
+
+    def get_description(self) -> str:
+        return self._coffee.get_description() + ", збиті вершки"
+
+
+# --- Приклад використання ---
 if __name__ == "__main__":
-    raw_price = 1000.0
+    # Звичайна кава
+    coffee = SimpleCoffee()
+    print(f"{coffee.get_description()} → {coffee.get_cost()} грн")
 
-    # Без знижки
-    order1 = Order(raw_price, NoDiscount())
-    print(f"Ціна без знижки: {order1.calculate_final_price()} грн")
+    # Кава + молоко
+    coffee_with_milk = MilkDecorator(coffee)
+    print(f"{coffee_with_milk.get_description()} → {coffee_with_milk.get_cost()} грн")
 
-    # Знижка 15%
-    order2 = Order(raw_price, PercentageDiscount(15))
-    print(f"Ціна зі знижкою 15%: {order2.calculate_final_price()} грн")
+    # Кава + молоко + цукор
+    coffee_milk_sugar = SugarDecorator(coffee_with_milk)
+    print(f"{coffee_milk_sugar.get_description()} → {coffee_milk_sugar.get_cost()} грн")
 
-    # Фіксована знижка 200 грн
-    order3 = Order(raw_price, FixedDiscount(200))
-    print(f"Ціна з фіксованою знижкою 200 грн: {order3.calculate_final_price()} грн")
+    # Кава + молоко + цукор + збиті вершки
+    luxury_coffee = WhipDecorator(coffee_milk_sugar)
+    print(f"{luxury_coffee.get_description()} → {luxury_coffee.get_cost()} грн")
