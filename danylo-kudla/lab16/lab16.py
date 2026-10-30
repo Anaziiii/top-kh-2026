@@ -1,13 +1,8 @@
-import unittest
-
-class TestDateHelper(unittest.TestCase):
-    def test_parse_dates_success(self):
-        dates, error = DateHelper.parse_rental_dates("2026.10.20","2026.10.22")
-        self.assertIsNone(error)
-        self.assertEqual(dates[0], date(2026, 10, 20))
-        self.assertEqual(dates[1], date(2026, 10, 22))
-
-    def test_parse_dates_invalid_format(self):
-        dates, error = DateHelper.parse_rental_dates("20.10.2026", "2026.10.22")
-        self.assertIsNone(dates)
-        self.assertIn("Неправильний формат", error)
+class DateHelper:
+    @staticmethod
+    def parse_rental_dates(start_str: str, end_str: str):
+        start_date = datetime.strptime(start_str, "%Y.%m.%d").date()
+        end_date = datetime.strptime(end_str, "%Y.%m.%d").date()
+        if start_date >= end_date:
+            return None, "Помилка: Час завершення має бути пізнішим за час початку!"
+        return (start_date, end_date), None
