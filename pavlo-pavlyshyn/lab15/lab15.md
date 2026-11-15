@@ -55,13 +55,45 @@
     - назви **calc**, **w**, **d**, **v**, **p** не пояснюють, що саме рахується;
     - числа **10**, **25**, **250**, **0.1**, **200** та інші записані прямо в коді, і без автора не зрозуміло, що вони означають;
     - одна функція одразу визначає тариф, рахує знижку і додає доплату.
-6. Застосовано три техніки, результат збережено у файлі [lab15](lab15.py):
+6. Для усунення цих запахів підходять такі техніки:
     - **Rename** - функцію названо **stay_price**, параметри - **weight**, **days**, **vaccinated**;
     - **Replace Magic Number with Symbolic Constant** - усі числа винесено в константи з назвами (**SMALL_DOG_RATE**, **LONG_STAY_DISCOUNT**, **NO_VACCINE_FEE** тощо);
     - **Decompose Conditional** та **Extract Method** - кожну умову винесено в окрему функцію: **day_rate**, **long_stay_discount**, **vaccine_fee**.
-7. Після рефакторингу основна функція складається з трьох рядків і читається як опис розрахунку:
+7. Після рефакторингу код має такий вигляд. Основна функція складається з трьох рядків і читається як опис розрахунку:
 
     ```python
+    SMALL_DOG_MAX_WEIGHT = 10
+    MEDIUM_DOG_MAX_WEIGHT = 25
+
+    SMALL_DOG_RATE = 250
+    MEDIUM_DOG_RATE = 350
+    LARGE_DOG_RATE = 450
+
+    LONG_STAY_DAYS = 7
+    LONG_STAY_DISCOUNT = 0.1
+    NO_VACCINE_FEE = 200
+
+
+    def day_rate(weight):
+        if weight < SMALL_DOG_MAX_WEIGHT:
+            return SMALL_DOG_RATE
+        if weight < MEDIUM_DOG_MAX_WEIGHT:
+            return MEDIUM_DOG_RATE
+        return LARGE_DOG_RATE
+
+
+    def long_stay_discount(price, days):
+        if days >= LONG_STAY_DAYS:
+            return price * LONG_STAY_DISCOUNT
+        return 0
+
+
+    def vaccine_fee(vaccinated):
+        if vaccinated:
+            return 0
+        return NO_VACCINE_FEE
+
+
     def stay_price(weight, days, vaccinated):
         price = day_rate(weight) * days
         price -= long_stay_discount(price, days)
